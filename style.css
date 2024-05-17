@@ -13,6 +13,17 @@ body{
     background-size: cover;
 }
 
+
+progress{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    height: 30px;
+    width: 500px;
+    margin-left: 30%;
+}
+
+
 h1{
     color: green;
     padding: 5%;
@@ -21,10 +32,30 @@ h1{
     align-items: center;
 }
 
-img{
+#tekst{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    background-color: white;
+    padding: 5%;
+    margin: 2%;
+    border-radius: 100%;
+}
+
+#main{
     display: block;
     margin-left: auto;
     margin-right: auto;
     width: 500px;
     height: 700px;
+}
+
+button{
+    justify-items: center;
+    padding: 2%;
+    height: 100px;
+    background-color: aliceblue;
+    border-radius: 20%;
+    justify-content: right;
+    justify-self:baseline;
 }
