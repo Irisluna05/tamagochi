@@ -17,16 +17,16 @@ body{
 progress{
     display: flex;
     justify-content: center;
-    justify-self: center;
+    align-items: center;
     height: 30px;
-    width: 500px;
-    margin-left: 30%;
+    width: 50%;
+    margin: 10px auto; /* Center and reduce margin */
 }
 
 
 h1{
     color: green;
-    padding: 5%;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,27 +35,50 @@ h1{
 #tekst{
     display: flex;
     justify-content: center;
-    justify-self: center;
+    align-items: center;
     background-color: white;
-    padding: 5%;
-    margin: 2%;
-    border-radius: 100%;
+    padding: 20px; 
+    margin: 50px auto; 
+    border-radius: 40%; 
+    width: fit-content; 
+    height: fit-content; 
 }
 
 #main{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto; /* Center and reduce margin */
     width: 500px;
     height: 700px;
 }
 
 button{
     justify-items: center;
-    padding: 2%;
+    font-size: smaller;
+    margin: 10%;
+    width: 100px;
+    padding: 5%;
     height: 100px;
     background-color: aliceblue;
-    border-radius: 20%;
-    justify-content: right;
-    justify-self:baseline;
+    border: 2px solid; 
+    padding: 10px; 
+    border-radius: 20%; 
+    text-align: center;
 }
+
+button:hover{
+    justify-items: center;
+    font-size: smaller;
+    margin: 10%;
+    width: 100px;
+    padding: 5%;
+    height: 100px;
+    background-color:pink;
+    border: 2px solid; 
+    padding: 10px; 
+    border-radius: 20%; 
+    text-align: center;
+}
+
+
+
+

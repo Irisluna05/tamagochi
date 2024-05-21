@@ -3,6 +3,7 @@ let tamagochi = document.querySelector("#main")
 const btn = document.querySelector ("#ketting")
 const btn2 = document.querySelector ("#eten")
 const pElement = document.querySelector("#tekst")
+
 let hungerbalk = document.querySelector ("#hunger")
 let hunger = 0
 
@@ -11,13 +12,13 @@ function verhoogHunger() {
     hungerbalk.value = hunger
     changeImageback()
     updateText()
+    checkHungerLevel()
 }
 
 setInterval (verhoogHunger,2000)
 
-
 function verlaagHunger() {
-    hunger = hunger - 2
+    hunger = hunger - 1
     hungerbalk.value = hunger
     changeImage()
     updateText()
@@ -30,13 +31,19 @@ function updateText() {
         pElement.textContent = "Hallo";
     }
 }
+ 
+function checkHungerLevel() {
+    if (hunger >= 10) {
+        tamagochi.src = 'images/vogelsad.png';
+    } else {
+        tamagochi.src = 'images/vogel3.png';
+    }
+}
 
-
-
-
-function changeImage() {document.querySelector("#main").src='images/vogel.png'}
-function changeImageback() {document.querySelector("#main").src='images/vogel3.png'}
-
+function changeImage() 
+{document.querySelector("#main").src='images/vogel.png'}
+function changeImageback() 
+{document.querySelector("#main").src='images/vogel3.png'}
 
 btn2.addEventListener("click",verlaagHunger);
 setTimeout (changeImageback,5000)
