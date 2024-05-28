@@ -4,6 +4,11 @@
     padding: 0%;
 }
 
+.Indeling{
+display: flex;
+justify-content: center;
+align-items: center;
+}
 
 body{
     background-image:url(images/beach.png);
@@ -46,15 +51,14 @@ h1{
 
 #main{
     display: block;
-    margin: 20px auto; /* Center and reduce margin */
-    width: 500px;
-    height: 700px;
+    margin: 5px auto;
+    width: 400px;
+    height: 600px;
 }
 
 button{
     justify-items: center;
     font-size: smaller;
-    margin: 10%;
     width: 100px;
     padding: 5%;
     height: 100px;
@@ -65,20 +69,19 @@ button{
     text-align: center;
 }
 
+
 button:hover{
     justify-items: center;
     font-size: smaller;
-    margin: 10%;
     width: 100px;
     padding: 5%;
     height: 100px;
-    background-color:pink;
+    background-color: pink;
     border: 2px solid; 
     padding: 10px; 
     border-radius: 20%; 
     text-align: center;
 }
-
 
 
 
