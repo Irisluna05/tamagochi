@@ -3,6 +3,7 @@ let tamagochi = document.querySelector("#main");
 const btn = document.querySelector("#ketting");
 const btn2 = document.querySelector("#eten");
 const pElement = document.querySelector("#tekst");
+const restartBtn = document.querySelector("#restart");
 
 let muziekje = new Audio("audio/cardinal.mp3"); //Bron Thomas Plas en Mozilla
 muziekje.play();
@@ -21,7 +22,7 @@ function verhoogHunger() {
     checkHungerLevel();
 }
 
-setInterval(verhoogHunger, 2000); //Bron theorie uit de les
+setInterval(verhoogHunger, 2000); //Door deze interval wordt de hunger vanzelf opgehoogd
 
 function verlaagHunger() {
     if (hunger > 0) {
@@ -45,9 +46,13 @@ function checkHungerLevel() {
     if (hunger >= 10) {
         tamagochi.src = 'images/vogelsad.png';
         pElement.textContent = "Ik wil nu ETEN";
+        restartBtn.style.visibility = 'visible';  // De button komt te voorschijn
+        btn2.disabled = true;
     } else {
-        tamagochi.src = 'images/vogel3.png';
-    }
+                tamagochi.src = 'images/vogel3.png';
+                restartBtn.style.visibility = 'hidden';
+                btn2.disabled = false; 
+     }
 }
 
 function changeImage() {
@@ -58,6 +63,16 @@ function changeImageback() {
     tamagochi.src = 'images/vogel3.png';
 }
 
+function restartSpel() {
+            hunger = 0;
+            hungerbalk.value = hunger;
+            pElement.textContent = "Hallo";
+            tamagochi.src = 'images/vogel3.png';
+            restartBtn.style.visability = 'hidden';
+            btn2.disabled = false; 
+        }
+
 
 btn2.addEventListener("click", verlaagHunger);
-setTimeout(changeImageback, 5000);
+restartBtn.addEventListener("click", restartSpel);
+

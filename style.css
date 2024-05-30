@@ -28,6 +28,15 @@ progress{
     margin: 10px auto; /* Center and reduce margin */
 }
 
+p{
+    display: flex;
+    background-color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-content: center;
+    justify-self:center;
+    padding: 20px; 
+    margin: 50px auto; 
+}
 
 h1{
     color: green;
@@ -54,6 +63,24 @@ h1{
     margin: 5px auto;
     width: 400px;
     height: 600px;
+}
+
+#main{ /*In mijn project 1 heb ik een soortgelijke keyframe gebruikt*/
+    padding-bottom: 5%;
+    animation-duration: 3s;
+    animation-name: bounce;
+    margin: auto;
+}
+
+/* Het bounce effect trekt meer aandacht naar de tamagochi*/
+@keyframes bounce{
+0%{ transform: translateY(0);}
+
+50%{ transform: translateY(-20px);}
+
+70%{ transform: translateY(20px);}
+
+100%{transform: translateY(0);}
 }
 
 button{
@@ -83,5 +110,17 @@ button:hover{
     text-align: center;
 }
 
+#restart{
+    justify-items: center;
+    font-size: smaller;
+    width: 100px;
+    padding: 5%;
+    height: 100px;
+    background-color: pink;
+    border: 2px solid; 
+    padding: 10px; 
+    border-radius: 20%; 
+    text-align: center;
+}
 
 
