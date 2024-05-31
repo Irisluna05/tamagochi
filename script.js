@@ -48,21 +48,21 @@ function checkHungerLevel() {
         restartBtn.style.visibility = 'visible'; 
         btn2.disabled = true;
     } else {
-                tamagochi.src = 'images/vogel.png';
+                tamagochi.src = './images/vogel.png';
                 restartBtn.style.visibility = 'hidden';
                 btn2.disabled = false; 
      }
 }
 
 function changeImage() {
-    tamagochi.src = 'images/vogeleat.png';
+    tamagochi.src = './images/vogeleat.png';
 }
 
 function restartSpel() {
             hunger = 0;
             hungerbalk.value = hunger;
             pElement.textContent = "Hallo";
-            tamagochi.src = 'images/vogel.png';
+            tamagochi.src = './images/vogel.png';
             restartBtn.style.visability = 'hidden';
             btn2.disabled = false; 
         }
