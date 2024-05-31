@@ -43,7 +43,7 @@ function updateText() {
 
 function checkHungerLevel() {
     if (hunger >= 10) {
-        tamagochi.src = 'images/vogelsad.png';
+        tamagochi.src = './images/vogelsad.png';
         pElement.textContent = "Ik wil nu ETEN";
         restartBtn.style.visibility = 'visible'; 
         btn2.disabled = true;
