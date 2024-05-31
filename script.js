@@ -4,9 +4,8 @@ const btn = document.querySelector("#ketting");
 const btn2 = document.querySelector("#eten");
 const pElement = document.querySelector("#tekst");
 const restartBtn = document.querySelector("#restart");
-
-let muziekje = new Audio("audio/cardinal.mp3"); //Bron Thomas Plas en Mozilla
-
+//--Bron Thomas Plas en Mozilla
+let muziekje = new Audio("audio/cardinal.mp3"); 
 let happy = new Audio("audio/happy.mp3")
 let hungerbalk = document.querySelector("#hunger");
 let hunger = 0;
@@ -58,15 +57,14 @@ function changeImage() {
 }
 
 function restartSpel() {
-            hunger = 0;
-            hungerbalk.value = hunger;
-            pElement.textContent = "Hallo";
-            tamagochi.src = './images/vogel.png';
-            restartBtn.style.visability = 'hidden';
-            btn2.disabled = false; 
-            muziekje.play();
-        }
-
+    hunger = 0;
+    hungerbalk.value = hunger;
+    pElement.textContent = "Hallo";
+    tamagochi.src = './images/vogel.png';
+    restartBtn.style.visibility = 'hidden'; // Corrected typo here
+    btn2.disabled = false; 
+    muziekje.play();
+}
 
 btn2.addEventListener("click", verlaagHunger);
 restartBtn.addEventListener("click", restartSpel);
