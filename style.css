@@ -65,14 +65,13 @@ h1{
     height: 600px;
 }
 
-#main{ /*In mijn project 1 heb ik een soortgelijke keyframe gebruikt*/
+#main{ 
     padding-bottom: 5%;
     animation-duration: 3s;
     animation-name: bounce;
     margin: auto;
 }
 
-/* Het bounce effect trekt meer aandacht naar de tamagochi*/
 @keyframes bounce{
 0%{ transform: translateY(0);}
 
