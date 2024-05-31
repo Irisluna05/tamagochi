@@ -17,12 +17,11 @@ function verhoogHunger() {
         hunger += 1;
     }
     hungerbalk.value = hunger;
-    changeImageback();
     updateText();
     checkHungerLevel();
 }
 
-setInterval(verhoogHunger, 2000); //Door deze interval wordt de hunger vanzelf opgehoogd
+setInterval(verhoogHunger, 2000); 
 
 function verlaagHunger() {
     if (hunger > 0) {
@@ -46,28 +45,24 @@ function checkHungerLevel() {
     if (hunger >= 10) {
         tamagochi.src = 'images/vogelsad.png';
         pElement.textContent = "Ik wil nu ETEN";
-        restartBtn.style.visibility = 'visible';  // De button komt te voorschijn
+        restartBtn.style.visibility = 'visible'; 
         btn2.disabled = true;
     } else {
-                tamagochi.src = 'images/vogel3.png';
+                tamagochi.src = 'images/vogel.png';
                 restartBtn.style.visibility = 'hidden';
                 btn2.disabled = false; 
      }
 }
 
 function changeImage() {
-    tamagochi.src = 'images/vogel.png';
-}
-
-function changeImageback() {
-    tamagochi.src = 'images/vogel3.png';
+    tamagochi.src = 'images/vogeleat.png';
 }
 
 function restartSpel() {
             hunger = 0;
             hungerbalk.value = hunger;
             pElement.textContent = "Hallo";
-            tamagochi.src = 'images/vogel3.png';
+            tamagochi.src = 'images/vogel.png';
             restartBtn.style.visability = 'hidden';
             btn2.disabled = false; 
         }
