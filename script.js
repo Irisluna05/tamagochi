@@ -6,7 +6,6 @@ const pElement = document.querySelector("#tekst");
 const restartBtn = document.querySelector("#restart");
 
 let muziekje = new Audio("audio/cardinal.mp3"); //Bron Thomas Plas en Mozilla
-muziekje.play();
 
 let happy = new Audio("audio/happy.mp3")
 let hungerbalk = document.querySelector("#hunger");
@@ -36,6 +35,7 @@ function verlaagHunger() {
 function updateText() {
     if (hunger > 5) {
         pElement.textContent = "Ik heb honger";
+        tamagochi.src = './images/vogel2.png';
     } else {
         pElement.textContent = "Hallo";
     }
@@ -48,7 +48,6 @@ function checkHungerLevel() {
         restartBtn.style.visibility = 'visible'; 
         btn2.disabled = true;
     } else {
-                tamagochi.src = './images/vogel.png';
                 restartBtn.style.visibility = 'hidden';
                 btn2.disabled = false; 
      }
@@ -65,6 +64,7 @@ function restartSpel() {
             tamagochi.src = './images/vogel.png';
             restartBtn.style.visability = 'hidden';
             btn2.disabled = false; 
+            muziekje.play();
         }
 
 
